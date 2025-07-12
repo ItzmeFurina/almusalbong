@@ -45,20 +45,9 @@
     .form-check-row {
       display: grid;
       grid-template-columns: auto 1fr auto auto;
-      gap: 10px;
       align-items: center;
+      gap: 10px;
       margin-top: 10px;
-    }
-
-    @media (max-width: 576px) {
-      .form-check-row {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .form-check-row select,
-      .form-check-row input[type="number"] {
-        width: 100%;
-      }
     }
 
     .form-check-row input[type="number"] {
@@ -110,6 +99,25 @@
 
     .fb-btn:hover {
       background-color: #365899;
+    }
+
+    @media (max-width: 576px) {
+      .form-check-row {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .form-check-label {
+        white-space: nowrap;
+      }
+
+      .form-check-row .form-select,
+      .form-check-row .qty-input {
+        width: 100% !important;
+      }
+
+      .fb-link {
+        margin: 20px 10px;
+      }
     }
   </style>
 </head>
@@ -192,11 +200,14 @@
       </div>
     </div>
 
+    <!-- Button and Total -->
     <button class="btn btn-submit w-100 mt-3" onclick="generateSummary()">Generate Order Summary</button>
     <div class="total-section mt-3">Total: ₱<span id="totalPrice">0</span></div>
+
+    <!-- Summary Output -->
     <div class="summary-box" id="orderSummary" style="display:none;"></div>
 
-    <!-- Facebook Reminder -->
+    <!-- FB LINK / INSTRUCTION -->
     <div class="fb-link">
       <p>📸 <strong>Screenshot your order summary</strong> and send it to us on Facebook:</p>
       <a href="https://www.facebook.com/bongsalmusalandbilao" target="_blank" class="fb-btn">
