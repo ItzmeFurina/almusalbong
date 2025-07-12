@@ -17,11 +17,20 @@
       overflow: hidden;
     }
 
-    .nav-container {
-      overflow-x: auto;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-    }
+   .nav-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+
+  /* Hide scrollbar for all browsers */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* Internet Explorer 10+ */
+}
+
+.nav-container::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari, Opera */
+}
 
     .nav-links {
       display: inline-flex;
