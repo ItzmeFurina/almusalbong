@@ -14,21 +14,22 @@
     .navbar {
       background-color: #f36106;
       padding: 10px 20px;
-      overflow-x: auto; /* allow horizontal scroll */
-      -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+      overflow-x: auto;            /* Allow side scrolling */
+      white-space: nowrap;         /* Keep links on one line */
+      -webkit-overflow-scrolling: touch;
     }
 
     .nav-links {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      width: max-content; /* ensures content can overflow horizontally */
+      min-width: max-content;      /* Force scroll if needed */
     }
 
     .logo {
       font-family: 'Pacifico', cursive;
       font-size: 2.2em;
-      color: white;
       margin-right: 50px;
+      color: white;
       white-space: nowrap;
     }
 
@@ -54,10 +55,9 @@
       <a href="index.html" class="logo">
         <span style="color: #1a1a40;">Bongs</span><span style="color: #ffe66d;">Almusal</span>
       </a>
-      <a class="nav-link food" href="food.html">Food We Sell</a>
-      <a class="nav-link pricing" href="price.html">Pricing</a>
-      <a class="nav-link about" href="about.html">About Us</a>
-      <!-- You can add more links and it will still scroll -->
+      <a class="nav-link" href="food.html">Food We Sell</a>
+      <a class="nav-link" href="price.html">Pricing</a>
+      <a class="nav-link" href="about.html">About Us</a>
     </div>
   </nav>
 
