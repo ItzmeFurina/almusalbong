@@ -14,7 +14,7 @@
   <style>
     body {
       font-family: 'Raleway', sans-serif;
-      background-color: #fff5e6; /* light breakfast-like bg */
+      background-color: #fff5e6;
       margin: 0;
     }
 
@@ -34,7 +34,6 @@
     }
 
     .hero-btn {
-      
       padding: 12px 25px;
       font-size: 1rem;
       background-color: #f36106;
@@ -51,21 +50,49 @@
       background-color: #e14f00;
       color: #ffe66d;
     }
-  .Options {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-    gap: 20px; 
-}
-.menu{
-background-color: #ffe66d;
-color: #1a1a40;
-}
-.order{
-background-color: #ffe66d;
-color: #1a1a40;
-}
 
+    .Options {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 20px;
+    }
+
+    .menu {
+      background-color: #ffe66d;
+      color: #1a1a40;
+    }
+
+    .order {
+      background-color: #ffe66d;
+      color: #1a1a40;
+    }
+
+    /* ✅ Responsive for mobile */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+        margin-top: 60px;
+      }
+
+      .tagline {
+        font-size: 1rem;
+        margin: 0 15px 30px;
+        text-align: center;
+      }
+
+      .Options {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 0 20px;
+      }
+
+      .hero-btn {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -80,9 +107,9 @@ color: #1a1a40;
   </div>
 
   <div class="Options">
-  <a href="food.html" class="hero-btn menu">View Our Menu</a>
-  <a href="ordernow.html" class="hero-btn order">Order Now</a>
-</div>
+    <a href="food.html" class="hero-btn menu">View Our Menu</a>
+    <a href="ordernow.html" class="hero-btn order">Order Now</a>
+  </div>
 
   <!-- Load Header via JS -->
   <script>
