@@ -7,38 +7,68 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway&display=swap" rel="stylesheet">
 
   <style>
-   .navbar {
-  background-color: #f36106;
-  padding: 10px 20px;
-}
+  * {
+    box-sizing: border-box;
+  }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-}
+  body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+  }
 
-.logo {
-  font-family: 'Pacifico', cursive;
-  font-size: 2.2em;
-  color: white;
-  margin-right: 50px;
+  .navbar {
+    background-color: #f36106;
+    padding: 10px 20px;
+  }
 
-}
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+  }
 
-.nav-link {
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.3em;
-  font-weight: 600;
-  margin-left: 35px;
-  text-decoration: none;
-  color: #fefdfd;
-}
+  .logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.2em;
+    color: white;
+    margin-right: 50px;
+    text-decoration: none;
+  }
 
-.nav-link:hover {
-  color: #ffc107; /* Gold hover */
-}
+  .logo span:first-child {
+    color: #1a1a40;
+  }
 
-  </style>
+  .logo span:last-child {
+    color: #ffe66d;
+  }
+
+  .nav-link {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-left: 35px;
+    text-decoration: none;
+    color: #fefdfd;
+  }
+
+  .nav-link:hover {
+    color: #ffc107;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav-link {
+      margin: 10px 0 0 0;
+    }
+  }
+</style>
+
 </head>
 <body>
 
