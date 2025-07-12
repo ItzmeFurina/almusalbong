@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Bongs Almusal</title>
 
   <!-- Bootstrap CSS -->
@@ -16,21 +16,23 @@
       font-family: 'Raleway', sans-serif;
       background-color: #fff5e6;
       margin: 0;
+      padding: 0;
     }
 
     h1 {
       font-family: 'Pacifico', cursive;
-      font-size: 3rem;
+      font-size: 2.5rem;
       text-align: center;
-      margin-top: 100px;
+      margin-top: 50px;
       color: #f36106;
     }
 
     .tagline {
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1rem;
       color: #333;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
+      padding: 0 15px;
     }
 
     .hero-btn {
@@ -40,10 +42,12 @@
       color: white;
       border: none;
       border-radius: 25px;
-      transition: background-color 0.3s;
+      transition: all 0.3s;
       text-decoration: none;
       text-align: center;
-      max-width: 200px;
+      width: 100%;
+      max-width: 250px;
+      display: block;
     }
 
     .hero-btn:hover {
@@ -53,9 +57,11 @@
 
     .Options {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       margin-top: 30px;
-      gap: 20px;
+      gap: 15px;
+      padding: 0 20px;
     }
 
     .menu {
@@ -68,29 +74,26 @@
       color: #1a1a40;
     }
 
-    /* ✅ Responsive for mobile */
-    @media (max-width: 768px) {
+    /* Desktop styles */
+    @media (min-width: 768px) {
       h1 {
-        font-size: 2rem;
-        margin-top: 60px;
+        font-size: 3rem;
+        margin-top: 100px;
       }
-
+      
       .tagline {
-        font-size: 1rem;
-        margin: 0 15px 30px;
-        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 40px;
       }
-
+      
       .Options {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 0 20px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
       }
-
+      
       .hero-btn {
-        width: 100%;
-        max-width: 300px;
+        width: auto;
       }
     }
   </style>
@@ -117,8 +120,13 @@
       .then(res => res.text())
       .then(data => {
         document.getElementById('header').innerHTML = data;
+      })
+      .catch(error => {
+        console.error('Error loading header:', error);
       });
   </script>
 
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
