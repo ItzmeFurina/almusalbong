@@ -3,73 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bongs Almusal</title>
+  <title>Document</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+   .navbar {
+  background-color: #f36106;
+  padding: 10px 20px;
+}
 
-    body {
-      margin: 0;
-      font-family: 'Raleway', sans-serif;
-    }
+.nav-links {
+  display: flex;
+  align-items: center;
+}
 
-    .navbar {
-      background-color: #f36106;
-      padding: 10px 20px;
-      overflow-x: auto; /* Allow horizontal scroll if needed */
-    }
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.2em;
+  color: white;
+  margin-right: 50px;
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      flex-wrap: nowrap; /* Don't wrap, keep in one line */
-      white-space: nowrap; /* Prevent text from wrapping */
-    }
+}
 
-    .logo {
-      font-family: 'Pacifico', cursive;
-      font-size: 2.2em;
-      margin-right: 40px;
-      text-decoration: none;
-      white-space: nowrap;
-    }
+.nav-link {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-left: 35px;
+  text-decoration: none;
+  color: #fefdfd;
+}
 
-    .logo span:first-child {
-      color: #1a1a40;
-    }
+.nav-link:hover {
+  color: #ffc107; /* Gold hover */
+}
 
-    .logo span:last-child {
-      color: #ffe66d;
-    }
-
-    .nav-link {
-      font-size: 1.2em;
-      font-weight: 600;
-      margin-left: 35px;
-      text-decoration: none;
-      color: #fefdfd;
-    }
-
-    .nav-link:hover {
-      color: #ffc107;
-    }
-
-    /* Optional scroll bar hiding on mobile */
-    .navbar::-webkit-scrollbar {
-      display: none;
-    }
   </style>
 </head>
 <body>
 
   <nav class="navbar">
     <div class="nav-links">
-      <a href="index.html" class="logo">
-        <span>Bongs</span><span>Almusal</span>
-      </a>
+      <!-- Logo -->
+<a href="index.html" class="logo">
+  <span style="color: #1a1a40;">Bongs</span><span style="color: #ffe66d;">Almusal</span>
+</a>
+      <!-- Navigation Links -->
       <a class="nav-link food" href="food.html">Food We Sell</a>
       <a class="nav-link pricing" href="price.html">Pricing</a>
       <a class="nav-link about" href="about.html">About Us</a>
