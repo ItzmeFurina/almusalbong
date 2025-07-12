@@ -7,37 +7,55 @@
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway&display=swap" rel="stylesheet">
 
   <style>
-   .navbar {
-  background-color: #f36106;
-  padding: 10px 20px;
-}
+    .navbar {
+      background-color: #f36106;
+      padding: 10px 20px;
+    }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-.logo {
-  font-family: 'Pacifico', cursive;
-  font-size: 2.2em;
-  color: white;
-  margin-right: 50px;
+    .logo {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.2em;
+      color: white;
+      margin-right: 50px;
+      text-decoration: none;
+    }
 
-}
+    .nav-link {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.3em;
+      font-weight: 600;
+      margin-left: 35px;
+      text-decoration: none;
+      color: #fefdfd;
+    }
 
-.nav-link {
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.3em;
-  font-weight: 600;
-  margin-left: 35px;
-  text-decoration: none;
-  color: #fefdfd;
-}
+    .nav-link:hover {
+      color: #ffc107; /* Gold hover */
+    }
 
-.nav-link:hover {
-  color: #ffc107; /* Gold hover */
-}
+    /* ✅ Responsive styles for mobile */
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
+      .logo {
+        margin: 0 0 10px 0;
+        font-size: 1.8em;
+      }
+
+      .nav-link {
+        margin: 8px 0;
+        font-size: 1.1em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -45,9 +63,9 @@
   <nav class="navbar">
     <div class="nav-links">
       <!-- Logo -->
-<a href="index.html" class="logo">
-  <span style="color: #1a1a40;">Bongs</span><span style="color: #ffe66d;">Almusal</span>
-</a>
+      <a href="index.html" class="logo">
+        <span style="color: #1a1a40;">Bongs</span><span style="color: #ffe66d;">Almusal</span>
+      </a>
       <!-- Navigation Links -->
       <a class="nav-link food" href="food.html">Food We Sell</a>
       <a class="nav-link pricing" href="price.html">Pricing</a>
