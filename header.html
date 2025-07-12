@@ -1,79 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway&display=swap" rel="stylesheet">
+  
+  <style>
+    /* NAVBAR STYLES (HORIZONTAL ON MOBILE & DESKTOP) */
+    .navbar {
+      background-color: #f36106;
+      padding: 10px 15px;
+      overflow-x: auto; /* Allows horizontal scrolling if needed */
+      white-space: nowrap; /* Prevents wrapping */
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    }
 
-<style>
-  .navbar {
-    background-color: #f36106;
-    padding: 10px 20px;
-    flex-wrap: wrap; /* Allows wrapping */
-  }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    font-family: 'Pacifico', cursive;
-    font-size: 2.2em;
-    color: white;
-    margin-right: 50px;
-  }
-
-  .nav-link {
-    font-family: 'Raleway', sans-serif;
-    font-size: 1.3em;
-    font-weight: 600;
-    margin-left: 35px;
-    text-decoration: none;
-    color: #fefdfd;
-  }
-
-  .nav-link:hover {
-    color: #ffc107;
-  }
-
-  /* ✅ Responsive for mobile */
-  @media (max-width: 768px) {
     .nav-links {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
+      display: inline-flex; /* Forces horizontal layout */
+      align-items: center;
+      gap: 15px; /* Spacing between links */
+      padding: 5px 0;
     }
 
+    /* LOGO STYLE */
     .logo {
-      margin-bottom: 10px;
-      font-size: 1.8em;
+      font-family: 'Pacifico', cursive;
+      font-size: 1.5em; /* Smaller on mobile */
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
     }
 
+    /* NAV LINK STYLE */
     .nav-link {
-      margin-left: 0;
-      font-size: 1.1em;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.9em; /* Smaller text on mobile */
+      font-weight: 600;
+      text-decoration: none;
+      color: #fefdfd;
+      padding: 5px 0;
     }
-  }
-</style>
 
+    .nav-link:hover {
+      color: #ffc107;
+    }
+
+    /* DESKTOP STYLES (Larger screens) */
+    @media (min-width: 768px) {
+      .navbar {
+        padding: 15px 30px;
+      }
+      
+      .logo {
+        font-size: 2.2em; /* Bigger logo on desktop */
+        margin-right: 50px;
+      }
+      
+      .nav-link {
+        font-size: 1.1em; /* Bigger text on desktop */
+      }
+      
+      .nav-links {
+        gap: 30px; /* More spacing on desktop */
+      }
+    }
+  </style>
 </head>
 <body>
-
   <nav class="navbar">
     <div class="nav-links">
-      <!-- Logo -->
-<a href="index.html" class="logo">
-  <span style="color: #1a1a40;">Bongs</span><span style="color: #ffe66d;">Almusal</span>
-</a>
-      <!-- Navigation Links -->
+      <a href="index.html" class="logo">
+        <span style="color: #1a1a40;">Bongs</span><span style="color: #ffe66d;">Almusal</span>
+      </a>
       <a class="nav-link food" href="food.html">Food We Sell</a>
       <a class="nav-link pricing" href="price.html">Pricing</a>
       <a class="nav-link about" href="about.html">About Us</a>
     </div>
   </nav>
-
 </body>
 </html>
