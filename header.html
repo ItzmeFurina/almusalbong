@@ -3,55 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Document</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway&display=swap" rel="stylesheet">
 
   <style>
-   .navbar {
-  background-color: #f36106;
-  padding: 10px 20px;
-}
+    .navbar {
+      background-color: #f36106;
+      padding: 10px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-}
+    .logo {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.8em;
+      color: white;
+      text-decoration: none;
+    }
 
-.logo {
-  font-family: 'Pacifico', cursive;
-  font-size: 2.2em;
-  color: white;
-  margin-right: 50px;
+    .logo span:first-child {
+      color: #1a1a40;
+    }
 
-}
+    .logo span:last-child {
+      color: #ffe66d;
+    }
 
-.nav-link {
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.3em;
-  font-weight: 600;
-  margin-left: 35px;
-  text-decoration: none;
-  color: #fefdfd;
-}
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-.nav-link:hover {
-  color: #ffc107; /* Gold hover */
-}
+    .nav-link {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.1em;
+      font-weight: 600;
+      text-decoration: none;
+      color: #fff;
+    }
 
+    .nav-link:hover {
+      color: #ffc107;
+    }
+
+    @media (max-width: 576px) {
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        margin-top: 10px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <nav class="navbar">
+    <a href="index.html" class="logo">
+      <span>Bongs</span><span>Almusal</span>
+    </a>
+
     <div class="nav-links">
-      <!-- Logo -->
-<a href="index.html" class="logo">
-  <span style="color: #1a1a40;">Bongs</span><span style="color: #ffe66d;">Almusal</span>
-</a>
-      <!-- Navigation Links -->
-      <a class="nav-link food" href="food.html">Food We Sell</a>
-      <a class="nav-link pricing" href="price.html">Pricing</a>
-      <a class="nav-link about" href="about.html">About Us</a>
+      <a class="nav-link" href="food.html">Food We Sell</a>
+      <a class="nav-link" href="price.html">Pricing</a>
+      <a class="nav-link" href="about.html">About Us</a>
     </div>
   </nav>
 
