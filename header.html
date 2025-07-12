@@ -3,80 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Header</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway&display=swap" rel="stylesheet">
-  
+  <title>Bongs Almusal</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    /* NAVBAR STYLES (HORIZONTAL ON MOBILE & DESKTOP) */
+    /* GENERAL STYLES */
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #fff5e6;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* NAVBAR (HORIZONTAL ON ALL SCREENS) */
     .navbar {
       background-color: #f36106;
       padding: 10px 15px;
       overflow-x: auto; /* Allows horizontal scrolling if needed */
-      white-space: nowrap; /* Prevents wrapping */
-      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+      white-space: nowrap; /* Prevents text wrapping */
     }
 
     .nav-links {
-      display: inline-flex; /* Forces horizontal layout */
+      display: inline-flex;
       align-items: center;
-      gap: 15px; /* Spacing between links */
-      padding: 5px 0;
+      gap: 15px;
     }
 
-    /* LOGO STYLE */
     .logo {
       font-family: 'Pacifico', cursive;
-      font-size: 1.5em; /* Smaller on mobile */
+      font-size: 1.5em;
       color: white;
       text-decoration: none;
       margin-right: 20px;
     }
 
-    /* NAV LINK STYLE */
+    .logo span:first-child { color: #1a1a40; }
+    .logo span:last-child { color: #ffe66d; }
+
     .nav-link {
       font-family: 'Raleway', sans-serif;
-      font-size: 0.9em; /* Smaller text on mobile */
+      font-size: 0.9em;
       font-weight: 600;
+      color: white;
       text-decoration: none;
-      color: #fefdfd;
-      padding: 5px 0;
     }
 
-    .nav-link:hover {
-      color: #ffc107;
+    .nav-link:hover { color: #ffc107; }
+
+    /* HERO SECTION */
+    .container {
+      text-align: center;
+      padding: 20px;
     }
 
-    /* DESKTOP STYLES (Larger screens) */
+    h1 {
+      font-family: 'Pacifico', cursive;
+      color: #f36106;
+      font-size: 2rem;
+      margin-top: 30px;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* BUTTONS (HORIZONTAL ON ALL SCREENS) */
+    .Options {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 15px;
+      margin-top: 20px;
+    }
+
+    .hero-btn {
+      padding: 10px 20px;
+      font-size: 0.9em;
+      background-color: #ffe66d;
+      color: #1a1a40;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    /* DESKTOP ENHANCEMENTS */
     @media (min-width: 768px) {
-      .navbar {
-        padding: 15px 30px;
-      }
-      
-      .logo {
-        font-size: 2.2em; /* Bigger logo on desktop */
-        margin-right: 50px;
-      }
-      
-      .nav-link {
-        font-size: 1.1em; /* Bigger text on desktop */
-      }
-      
-      .nav-links {
-        gap: 30px; /* More spacing on desktop */
-      }
+      .navbar { padding: 15px 30px; }
+      .logo { font-size: 2.2em; margin-right: 50px; }
+      .nav-link { font-size: 1.1em; }
+      .nav-links { gap: 30px; }
+      h1 { font-size: 3rem; margin-top: 50px; }
+      .tagline { font-size: 1.2rem; }
+      .Options { gap: 20px; }
+      .hero-btn { padding: 12px 25px; font-size: 1rem; }
     }
   </style>
 </head>
 <body>
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-links">
       <a href="index.html" class="logo">
-        <span style="color: #1a1a40;">Bongs</span><span style="color: #ffe66d;">Almusal</span>
+        <span>Bongs</span><span>Almusal</span>
       </a>
-      <a class="nav-link food" href="food.html">Food We Sell</a>
-      <a class="nav-link pricing" href="price.html">Pricing</a>
-      <a class="nav-link about" href="about.html">About Us</a>
+      <a href="food.html" class="nav-link">Food We Sell</a>
+      <a href="price.html" class="nav-link">Pricing</a>
+      <a href="about.html" class="nav-link">About Us</a>
     </div>
   </nav>
+
+  <!-- HERO SECTION -->
+  <div class="container">
+    <h1>Bongs Almusal</h1>
+    <p class="tagline">Sarap ng umaga, Sarap sa pag kaen Tara simulan sa Bongs Almusal 😊</p>
+  </div>
+
+  <!-- BUTTONS -->
+  <div class="Options">
+    <a href="food.html" class="hero-btn">View Our Menu</a>
+    <a href="ordernow.html" class="hero-btn">Order Now</a>
+  </div>
 </body>
 </html>
