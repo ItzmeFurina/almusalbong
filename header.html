@@ -1,123 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
-  <title>Bongs Almusal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway&display=swap" rel="stylesheet">
+
   <style>
-    /* FIXED LAYOUT (SCALABLE VIA ZOOM) */
-    body {
-      font-family: 'Raleway', sans-serif;
-      background-color: #fff5e6;
-      margin: 0;
-      padding: 0;
-      min-width: 320px; /* Prevents extreme zoom-out */
-    }
+   .navbar {
+  background-color: #f36106;
+  padding: 10px 20px;
+}
 
-    /* NAVBAR - ALWAYS HORIZONTAL */
-    .navbar {
-      background-color: #f36106;
-      padding: 10px 20px;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 100;
-    }
+.nav-links {
+  display: flex;
+  align-items: center;
+}
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      flex-wrap: nowrap; /* Prevents wrapping */
-    }
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.2em;
+  color: white;
+  margin-right: 50px;
 
-    .logo {
-      font-family: 'Pacifico', cursive;
-      font-size: 24px;
-      color: white;
-      text-decoration: none;
-      margin-right: 30px;
-      white-space: nowrap;
-    }
+}
 
-    .logo span:first-child { color: #1a1a40; }
-    .logo span:last-child { color: #ffe66d; }
+.nav-link {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-left: 35px;
+  text-decoration: none;
+  color: #fefdfd;
+}
 
-    .nav-link {
-      font-family: 'Raleway', sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      color: white;
-      text-decoration: none;
-      margin-right: 20px;
-      white-space: nowrap;
-    }
+.nav-link:hover {
+  color: #ffc107; /* Gold hover */
+}
 
-    /* MAIN CONTENT */
-    .container {
-      text-align: center;
-      margin-top: 80px; /* Accounts for fixed navbar */
-      padding: 20px;
-    }
-
-    h1 {
-      font-family: 'Pacifico', cursive;
-      color: #f36106;
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .tagline {
-      font-size: 18px;
-      color: #333;
-      margin-bottom: 30px;
-    }
-
-    /* BUTTONS - ALWAYS HORIZONTAL */
-    .Options {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 20px;
-    }
-
-    .hero-btn {
-      padding: 12px 25px;
-      font-size: 16px;
-      background-color: #ffe66d;
-      color: #1a1a40;
-      border: none;
-      border-radius: 25px;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    /* NO MEDIA QUERIES - SAME LAYOUT EVERYWHERE */
   </style>
 </head>
 <body>
-  <!-- NAVBAR (ALWAYS HORIZONTAL) -->
+
   <nav class="navbar">
     <div class="nav-links">
-      <a href="index.html" class="logo">
-        <span>Bongs</span><span>Almusal</span>
-      </a>
-      <a href="food.html" class="nav-link">Food We Sell</a>
-      <a href="price.html" class="nav-link">Pricing</a>
-      <a href="about.html" class="nav-link">About Us</a>
+      <!-- Logo -->
+<a href="index.html" class="logo">
+  <span style="color: #1a1a40;">Bongs</span><span style="color: #ffe66d;">Almusal</span>
+</a>
+      <!-- Navigation Links -->
+      <a class="nav-link food" href="food.html">Food We Sell</a>
+      <a class="nav-link pricing" href="price.html">Pricing</a>
+      <a class="nav-link about" href="about.html">About Us</a>
     </div>
   </nav>
 
-  <!-- MAIN CONTENT -->
-  <div class="container">
-    <h1>Bongs Almusal</h1>
-    <p class="tagline">Sarap ng umaga, Sarap sa pag kaen Tara simulan sa Bongs Almusal 😊</p>
-    
-    <!-- BUTTONS (ALWAYS HORIZONTAL) -->
-    <div class="Options">
-      <a href="food.html" class="hero-btn">View Our Menu</a>
-      <a href="ordernow.html" class="hero-btn">Order Now</a>
-    </div>
-  </div>
 </body>
 </html>
